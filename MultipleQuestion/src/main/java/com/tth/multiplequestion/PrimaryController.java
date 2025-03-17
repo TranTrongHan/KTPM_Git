@@ -39,7 +39,7 @@ public class PrimaryController implements Initializable{
     
     public void checkHandler(ActionEvent e) throws SQLException{
         QuestionServices s = new QuestionServices();
-        List<Question> questions = s.getQuestions(2);
+        List<Question> questions = s.getQuestions(2,null);
         
         Alert a = new Alert(Alert.AlertType.INFORMATION,questions.get(0).getContent(),ButtonType.OK);
         a.show();
@@ -51,7 +51,7 @@ public class PrimaryController implements Initializable{
     public void initialize(URL url, ResourceBundle rb){
         QuestionServices s = new QuestionServices();
         try {
-            this.questions = s.getQuestions(3);
+            this.questions = s.getQuestions(3,null);
             loadQuestionToUI();
         } catch (SQLException ex) {
             Logger.getLogger(PrimaryController.class.getName()).log(Level.SEVERE, null, ex);

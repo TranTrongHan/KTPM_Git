@@ -1,0 +1,12 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.Text{
+    -fx-font-size:30px;
+    -fx-fill:brown;
+}
+#cbCate{
+    -fx-fill: darkorange;
+    -fx-background-color:fuchsia;
+}
